@@ -1,5 +1,5 @@
 ---
-title: "Portfolio item number 1"
+title: "'A mere maiden': exploring Lúthien Tinúviel’s relationship with dance and song with word dispersions and correlation tests"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
