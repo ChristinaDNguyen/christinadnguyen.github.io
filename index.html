@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Christina D. Nguyen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"/>
   <style>
     * {
       box-sizing: border-box;
@@ -32,20 +32,23 @@
       top: 0;
       left: 0;
       width: 100%;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
       background: transparent;
       z-index: 10;
     }
 
     header h1 {
-      font-size: 9.5rem;
+      font-size: clamp(2rem, 10vw, 9.5rem); /* Responsive size */
       margin: 0;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       color: #0a2342; /* Navy blue */
       letter-spacing: 0.02em;
       width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .left-column {
@@ -138,7 +141,7 @@
 
       .right-column {
         padding: 1rem;
-        padding-top: 8rem;
+        padding-top: 14rem;
       }
 
       .bio {
