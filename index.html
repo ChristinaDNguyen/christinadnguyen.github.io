@@ -82,13 +82,34 @@
       color: #fff;
     }
     .gallery {
-      width: 100%;
-      overflow-x: auto;
-      display: flex;
-      gap: 1rem;
-      padding: 1rem 0;
-      border-top: 1px solid #ccc;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.gallery figure {
+  margin: 0;
+  width: 160px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.gallery figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
     .gallery img {
       height: 150px;
       border: 2px solid #ccc;
@@ -128,12 +149,24 @@
         <a href="https://scholar.google.ca/citations?user=wfNAVRwAAAAJ&hl=en">Find me on Google Scholar</a>
         <a href="https://yourlabwebsite.ca">See the Matrix Functionalization and Phenotyping (MFP) lab</a>
       </div>
-      <section class="gallery">
-        <img src="image1-fisher-topdown.jpg" alt="A manuscript at Thomas Fisher Library, as seen from the top-down.">
-        <img src="image2-fibresmicroscope.jpg" alt="Collagen fibres extracted from a parchment sample, under a light microscope.">
-        <img src="image3-extracting.jpg" alt="The extraction of collagen fibres from a parchment sample.">
-        <img src="image4-parchmentslice3d.jpg" alt="A microCT image of a small parchment sample, rendered for 3D glasses.">
-      </section>
+     <section class="gallery">
+  <figure>
+    <img src="image1-fisher-topdown.jpg" alt="A manuscript at Thomas Fisher Library, as seen from the top-down.">
+    <figcaption>A manuscript at Thomas Fisher Library, as seen from the top-down.</figcaption>
+  </figure>
+  <figure>
+    <img src="image2-fibresmicroscope.jpg" alt="Collagen fibres extracted from a parchment sample, under a light microscope.">
+    <figcaption>Collagen fibres extracted from a parchment sample, under a light microscope.</figcaption>
+  </figure>
+  <figure>
+    <img src="image3-extracting.jpg" alt="The extraction of collagen fibres from a parchment sample.">
+    <figcaption>The extraction of collagen fibres from a parchment sample.</figcaption>
+  </figure>
+  <figure>
+    <img src="image4-parchmentslice3d.jpg" alt="A microCT image of a small parchment sample, rendered for 3D glasses.">
+    <figcaption>A microCT image of a small parchment sample, rendered for 3D glasses.</figcaption>
+  </figure>
+</section>
     </div>
   </main>
 </body>
