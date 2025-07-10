@@ -34,4 +34,231 @@
 
     body {
       margin: 0;
-      font-family: 'Int
+      font-family: 'Inter', sans-serif;
+      background: #f8f6f1;
+      color: #222;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0;
+      height: 100vh;
+      position: relative;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      background: transparent;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: clamp(3.5rem, 10vw, 9rem);
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      color: #0a2342;
+      letter-spacing: 0.02em;
+      width: 100%;
+      text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.15),
+        4px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-column {
+      flex: 0 0 50%;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .right-column {
+      flex: 0 0 50%;
+      padding: 2rem;
+      overflow-y: auto;
+      padding-top: 12rem;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      border: none;
+    }
+
+    .bio {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #333;
+      border-radius: 5px;
+      background: #fff;
+      transition: all 0.2s ease;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.54rem; /* Increased ~40% */
+    }
+
+    .buttons a:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    .gallery {
+      background: #f0ede6;
+      padding: 3rem 1rem;
+      border-top: 1px solid #ccc;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .gallery figure {
+      margin: 0;
+      width: 275px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery figure:hover {
+      transform: translateY(-6px);
+    }
+
+    .gallery a {
+      display: block;
+      cursor: zoom-in;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery figcaption {
+      font-size: 0.95rem;
+      color: #333;
+      margin-top: 0.75rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+
+      .right-column {
+        padding: 1rem;
+        padding-top: 8rem;
+      }
+
+      .bio {
+        text-align: center;
+      }
+
+      .gallery {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 2rem 1rem;
+      }
+
+      .gallery figure {
+        flex: 0 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <h1>Christina D. Nguyen</h1>
+    </header>
+
+    <div class="left-column">
+      <img src="myheadshotjpg.jpg" alt="Portrait of Christina D. Nguyen" class="portrait" />
+    </div>
+
+    <div class="right-column">
+      <div class="bio">
+        <p>Hello! My name is Christina D. Nguyen (she/her), a doctoral student in the Faculty of Information at the University of Toronto. My research explores the material of parchment (animal skin used as a writing substrate), conservation techniques, and public access to heritage materials through emerging technologies.</p>
+      </div>
+
+      <div class="buttons">
+        <a href="mailto:christinadinh.nguyen@utoronto.ca">Email me</a>
+        <a href="Website-cv.pdf" download>Download my CV</a>
+        <a href="https://scholar.google.ca/citations?user=wfNAVRwAAAAJ&hl=en">Find me on Google Scholar</a>
+        <a href="https://yourlabwebsite.ca">Visit the Matrix Functionalization and Phenotyping (MFP) lab</a>
+      </div>
+
+      <section class="gallery">
+        <figure>
+          <a href="image1-fisher-topdown.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="image1-fisher-topdown.jpg" alt="A manuscript at Thomas Fisher Library, as seen from the top-down." />
+          </a>
+          <figcaption>A manuscript at Thomas Fisher Library, as seen from the top-down. | Un manuscrit à la Bibliothèque Thomas Fisher, vu de dessus.</figcaption>
+        </figure>
+        <figure>
+          <a href="image2-fibresmicroscope.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="image2-fibresmicroscope.jpg" alt="Collagen fibres extracted from a parchment sample, under a light microscope." />
+          </a>
+          <figcaption>Collagen fibres extracted from a parchment sample, under a light microscope. | Fibres de collagène extraites d’un échantillon de parchemin, vues au microscope optique.</figcaption>
+        </figure>
+        <figure>
+          <a href="image3-extracting.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="image3-extracting.jpg" alt="The extraction of collagen fibres from a parchment sample." />
+          </a>
+          <figcaption>The extraction of collagen fibres from a parchment sample. | L’extraction des fibres de collagène à partir d’un échantillon de parchemin.</figcaption>
+        </figure>
+        <figure>
+          <a href="image4-parchmentslice3d.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="image4-parchmentslice3d.jpg" alt="A microCT image of a small parchment sample, rendered for 3D glasses." />
+          </a>
+          <figcaption>A microCT image of a small parchment sample, rendered for 3D glasses. | Une image microCT d’un petit échantillon de parchemin, rendue pour lunettes 3D.</figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+
+</body>
+</html>
