@@ -38,18 +38,19 @@
       z-index: 10;
     }
 
-header h1 {
-  font-size: clamp(3.5rem, 10vw, 9rem);
-  margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  color: #0a2342;
-  letter-spacing: 0.02em;
-  width: 100%;
-  text-shadow:
-    2px 2px 4px rgba(0, 0, 0, 0.15),
-    4px 4px 6px rgba(0, 0, 0, 0.1);
-}
+    header h1 {
+      font-size: clamp(3.5rem, 10vw, 9rem);
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      color: #0a2342;
+      letter-spacing: 0.02em;
+      width: 100%;
+      text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.15),
+        4px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
     .left-column {
       flex: 0 0 50%;
       padding: 0;
@@ -61,7 +62,7 @@ header h1 {
       flex: 0 0 50%;
       padding: 2rem;
       overflow-y: auto;
-      padding-top: 12rem; /* Adjusted to account for the header */
+      padding-top: 12rem;
     }
 
     .portrait {
@@ -103,31 +104,49 @@ header h1 {
     }
 
     .gallery {
+      background: #f0ede6;
+      padding: 3rem 1rem;
+      border-top: 1px solid #ccc;
+      text-align: center;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      padding: 2rem 0;
-      border-top: 1px solid #ccc;
-      text-align: center;
     }
 
     .gallery figure {
       margin: 0;
-      width: 160px;
+      width: 200px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery figure:hover {
+      transform: translateY(-6px);
     }
 
     .gallery img {
       width: 100%;
       height: auto;
-      border: 2px solid #ccc;
-      border-radius: 5px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
 
     .gallery figcaption {
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #333;
+      margin-top: 0.75rem;
+      font-style: italic;
       line-height: 1.4;
     }
 
@@ -150,6 +169,7 @@ header h1 {
       .gallery {
         flex-wrap: nowrap;
         overflow-x: auto;
+        padding: 2rem 1rem;
       }
 
       .gallery figure {
@@ -188,20 +208,4 @@ header h1 {
           <figcaption>A manuscript at Thomas Fisher Library, as seen from the top-down.</figcaption>
         </figure>
         <figure>
-          <img src="image2-fibresmicroscope.jpg" alt="Collagen fibres extracted from a parchment sample, under a light microscope.">
-          <figcaption>Collagen fibres extracted from a parchment sample, under a light microscope.</figcaption>
-        </figure>
-        <figure>
-          <img src="image3-extracting.jpg" alt="The extraction of collagen fibres from a parchment sample.">
-          <figcaption>The extraction of collagen fibres from a parchment sample.</figcaption>
-        </figure>
-        <figure>
-          <img src="image4-parchmentslice3d.jpg" alt="A microCT image of a small parchment sample, rendered for 3D glasses.">
-          <figcaption>A microCT image of a small parchment sample, rendered for 3D glasses.</figcaption>
-        </figure>
-      </section>
-    </div>
-  </main>
-
-</body>
-</html>
+          <img src="image2-fibresmicroscope.jpg" alt="Collagen fibres extracted from a parchment sample, under a
