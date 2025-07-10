@@ -128,6 +128,13 @@
       transform: translateY(-6px);
     }
 
+    .gallery a {
+      display: block;
+      cursor: zoom-in;
+      text-decoration: none;
+      color: inherit;
+    }
+
     .gallery img {
       width: 100%;
       height: auto;
@@ -135,6 +142,7 @@
       border: none;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
     }
 
     .gallery img:hover {
@@ -204,19 +212,27 @@
 
       <section class="gallery">
         <figure>
-          <img src="image1-fisher-topdown.jpg" alt="A manuscript at Thomas Fisher Library, as seen from the top-down.">
+          <a href="image1-fisher-topdown.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="image1-fisher-topdown.jpg" alt="A manuscript at Thomas Fisher Library, as seen from the top-down." />
+          </a>
           <figcaption>A manuscript at Thomas Fisher Library, as seen from the top-down.</figcaption>
         </figure>
         <figure>
-          <img src="image2-fibresmicroscope.jpg" alt="Collagen fibres extracted from a parchment sample, under a light microscope.">
+          <a href="image2-fibresmicroscope.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="image2-fibresmicroscope.jpg" alt="Collagen fibres extracted from a parchment sample, under a light microscope." />
+          </a>
           <figcaption>Collagen fibres extracted from a parchment sample, under a light microscope.</figcaption>
         </figure>
         <figure>
-          <img src="image3-extracting.jpg" alt="The extraction of collagen fibres from a parchment sample.">
+          <a href="image3-extracting.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="image3-extracting.jpg" alt="The extraction of collagen fibres from a parchment sample." />
+          </a>
           <figcaption>The extraction of collagen fibres from a parchment sample.</figcaption>
         </figure>
         <figure>
-          <img src="image4-parchmentslice3d.jpg" alt="A microCT image of a small parchment sample, rendered for 3D glasses.">
+          <a href="image4-parchmentslice3d.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="image4-parchmentslice3d.jpg" alt="A microCT image of a small parchment sample, rendered for 3D glasses." />
+          </a>
           <figcaption>A microCT image of a small parchment sample, rendered for 3D glasses.</figcaption>
         </figure>
       </section>
