@@ -32,9 +32,23 @@
     .container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
+      align-items: flex-start;
       padding: 2rem;
     }
+    .left-column {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.right-column {
+  flex: 2;
+  padding: 1rem 2rem;
+}
     .bio {
       max-width: 500px;
       font-size: 1rem;
@@ -99,21 +113,30 @@
     <h1>Christina D. Nguyen</h1>
   </header>
 
-  <main class="container">
-    <div>
-      <img src="my-headshot.jpg.jpg" alt="Portrait of Christina D. Nguyen" class="portrait">
-      <div class="bio">
-        <p>Hello! My name is Christina D. Nguyen (she/her), a doctoral student in the Faculty of Information at the University of Toronto. My research explores the material of parchment (animal skin used as a writing substrate), conservation techniques, and public access to heritage materials through emerging technologies.</p>
-      </div>
-      <div class="buttons">
-        <a href="mailto:christinadinh.nguyen@utoronto.ca">Email me!</a>
-        <a href="my-cv.pdf" download>Download my CV</a>
-        <a href="https://ischool.utoronto.ca/student-profile/christina-dinh-nguyen/">See my Faculty profile</a>
-        <a href="https://scholar.google.ca/citations?user=wfNAVRwAAAAJ&hl=en">Find me on Google Scholar</a>
-        <a href="https://yourlabwebsite.ca">See the Matrix Functionalization and Phenotyping (MFP) lab</a>
-      </div>
+<main class="container">
+  <div class="left-column">
+    <img src="my-headshot.jpg.jpg" alt="Portrait of Christina D. Nguyen" class="portrait">
+  </div>
+  <div class="right-column">
+    <div class="bio">
+      <p>Hello! My name is Christina D. Nguyen (she/her), a doctoral student in the Faculty of Information at the University of Toronto. My research explores the material of parchment (animal skin used as a writing substrate), conservation techniques, and public access to heritage materials through emerging technologies.</p>
     </div>
-  </main>
+    <div class="buttons">
+      <a href="mailto:christinadinh.nguyen@utoronto.ca">Email me!</a>
+      <a href="my-cv.pdf" download>Download my CV</a>
+      <a href="https://ischool.utoronto.ca/student-profile/christina-dinh-nguyen/">See my Faculty profile</a>
+      <a href="https://scholar.google.ca/citations?user=wfNAVRwAAAAJ&hl=en">Find me on Google Scholar</a>
+      <a href="https://yourlabwebsite.ca">See the Matrix Functionalization and Phenotyping (MFP) lab</a>
+    </div>
+    <section class="gallery">
+      <img src="image1-fisher-topdown.jpg" alt="A manuscript at Thomas Fisher Library, as seen from the top-down.">
+      <img src="image2-fibresmicroscope.jpg" alt="Collagen fibres extracted from a parchment sample, under a light microscope.">
+      <img src="image3-extracting.jpg" alt="The extraction of collagen fibres from a parchment sample.">
+      <img src="image4-parchmentslice3d.jpg" alt="A microCT image of a small parchment sample, rendered for 3D glasses.">
+    </section>
+  </div>
+</main>
+
 
   <section class="gallery">
     <img src="image1-fisher-topdown.jpg" alt="A manuscript at Thomas Fisher Library, as seen from the top-down.">
